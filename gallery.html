@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/fullpage.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <!--script-->
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/main.js"></script>
+    <!--plugin-->
+    <script src="js/scrolla.jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.fullpage.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <!--menuOpen-->
+        <div class="menuOpen">
+            <button class="open"><img src="img/open.png" alt="메뉴열기"></button>
+            <div class="menuWrap">
+                <a href="#" class="close"><img src="img/close.png" alt="메뉴닫기"></a>
+                <div class="menu">
+                    <a href="index.html"><span>Home</span></a>
+                </div>
+                <div class="menu">
+                    <a href="about.html"><span>About</span></a>
+                </div>
+                <div class="menu">
+                    <a href="gallery.html"><span>Gallery</span></a>
+                </div>
+                <dv class="menu">
+                    <a href="contact.html"><span>Contact</span></a>
+                </dv>
+            </div>
+        </div>
+        <!--header-->
+        <header>
+            <div class="innerHeader">
+                <h1 class="logo"><a href="index.html"><img src="img/Logo.png" alt="로고"></a></h1>
+                <ul class="tnb">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </header>
+        <!--contents-->
+        <div class="fullPageWrap">
+            <div id="fullpage">
+                <div class="section" id="section1">
+                    <div class="inner">
+                        <h2 class="mainTit">Dopda</h2>
+                        <p class="img"><img src="img/gallery-dopada-2.png" alt="맥북 사진"></p>
+                        <p class="tit en"><a href="dopda/index.html" target="_blank" >Web Site</a></p>
+                        <button onclick="myFunction()"><p class="txt"><a href="#">Mobile Web</a></p></button>
+                        <button class="moreBtn"><a href="details.dopda.html" target="blank">more <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a></button>
+                    </div>
+
+                </div>
+                <div class="section" id="section2">
+                    <div class="inner">
+                        <h2 class="mainTit">Crew a la mode</h2>
+                        <p class="img"><img src="img/crew-2.png" alt="맥북 사진"></p>
+                        <p class="tit en"><a href="crew/index.html" target="_blank">Web Site</a></p>
+                        <button onclick="anyFunction()"><p class="txt"><a href="#">Mobile Web</a></p></button>
+                        <button class="moreBtn" ><a href="details.crew.html" target="blank">more <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a></button>
+                    </div>
+                </div>
+                <div class="section" id="section3">
+                    <div class="inner">
+                        <h2 class="mainTit">Musign</h2>
+                        <p class="img"><img src="img/musign-2.png" alt="맥북 사진"></p>
+                        <p class="tit en"><a href="musign/index.html" target="_blank">Web Site</a></p>
+                        <button onclick="forFunction()"><p class="txt"><a href="#">Mobile Web</a></p></button>
+                        <button class="moreBtn"><a href="details.musign.html" target="blank">more <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a></button>
+                    </div>
+                </div>
+                <div class="section" id="section4">
+                    <div class="inner">
+                        <h2 class="mainTit">Onyang-museum</h2>
+                        <p class="img"><img src="img/onyang-2.png" alt="맥북 사진"></p>
+                        <p class="tit en"><a href="onyang/index.html" target="_blank">Web Site</a></p>
+                        <button class="moreBtn"><a href="details.onyang.html" target="blank">more <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a></button>
+                    </div>
+                </div>
+                <div class="section" id="section5">
+                    <div class="inner">
+                        <h2 class="mainTit">Y studio</h2>
+                        <p class="img"><img src="img/ystudio-2.png" alt="맥북 사진"></p>
+                        <p class="tit en"><a href="Ystudio/index.html" target="_blank">Web Site</a></p> 
+                        <button class="moreBtn"><a href="details.ystudio.html" target="blank">more <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a></button>
+                    </div>
+
+                </div>
+                <div class="section" id="section6">
+                    <div class="inner">
+                        <h2 class="mainTit">Phomein</h2>
+                        <p class="img"><img src="img/phomein-2.png" alt="맥북 사진"></p>
+                        <p class="tit en"><a href="phomein/index.html" target="_blank">Web Site</a></p>
+                        <button class="moreBtn"><a href="details.phomein.html" target="blank">more <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a></button>
+                    </div>
+                </div>
+                <div class="section" id="section7">
+                    <div class="inner">
+                        <h2 class="mainTit">Hanwha</h2>
+                        <p class="img"><img src="img/hanwha-2.png" alt="맥북 사진"></p>
+                        <p class="tit en"><a href="hanwha/index.html" target="_blank">Web Site</a></p>
+                        <button class="moreBtn"><a href="details.hanwha.html" target="blank">more <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a></button>
+                    </div>
+                </div>
+                 <div class="section" id="section8">
+                    <div class="inner">
+                        <h2 class="mainTit">Portfolio</h2>
+                        <p class="img"><img src="img/portfolio-2.png" alt="맥북 사진"></p>
+                        <p class="tit en"><a href="index.html">Web Site</a></p>
+                        <button class="moreBtn"><a href="img/portfolio.pdf" target="_blank">more <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a></button>
+                    </div>
+                </div>
+                <!--footer-->
+                <div class="section footerWrap fp-auto-height">
+                    <div class="footer">
+                        <div class="topBox">
+                            <p>2021@goyeeun</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--rightNav-->
+            <ul class="rightNav" id="rightNav">
+                <li data-menuanchor="firstPage" class="active">
+                    <a href="#firstPage"><span>Dopda</span></a>
+                </li>
+                <li data-menuanchor="secondPage" class="active">
+                    <a href="#secondPage"><span>crew</span></a>
+                </li>
+                <li data-menuanchor="thirdPage" class="active">
+                    <a href="#thirdPage"><span>Musign</span></a>
+                </li>
+                <li data-menuanchor="fourthPage" class="active">
+                    <a href="#fourthPage"><span>Onyang</span></a>
+                </li>
+                <li data-menuanchor="fifthPage" class="active">
+                    <a href="#fifthPage"><span>Y studio</span></a>
+                </li>
+                <li data-menuanchor="sixthPage" class="active">
+                    <a href="#sixthPage"><span>Phomein</span></a>
+                </li>
+                <li data-menuanchor="seventhPage" class="active">
+                    <a href="#seventhPage"><span>Hawha</span></a>
+                </li>
+                <li data-menuanchor="eightPage" class="active">
+                    <a href="#eightPage"><span>Portfolio</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

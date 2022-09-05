@@ -1,0 +1,42 @@
+* 1단계_웹페이지
+http://www.ystudio.co.kr/
+
+
+1. 1단계 레이아웃 잡기  
+- 웹폰트 적용 설명필요
+
+
+2. 쥐엔비 적용  햄버거메뉴
+- html: gnb 추가
+- css: gnb css 추가
+- script: gnb 메뉴 열리도록 소스 추가
+
+
+3. 스크롤 애니적용 (헤더/컨텐츠내용 등)
+- css: fixHeader css추가
+- script: fixHeader css추가
+- 스크롤러 플러그인 사이트 들어가서 설명필요 
+------------------------------------------------------------------------
+
+
+   1. js폴더에 제공해드린 animation.min.css를 복사해 둠
+   2. 헤더에 <link rel="stylesheet" type="text/css" href="css/animate.min.css" > 
+   3. <script src="js/scrolla.jquery.min.js"></script>
+   4. html에 <div class="animate" data-animate="bounceIn" data-duration="1.0s" data-delay="0.1s">적용
+
+
+ 
+  (scrolla.jquery.min.js//animate.min.css 걸어줌)
+- html: data-animate="fadeIn" 추가
+- script: scrolla 소스추가
+- 상단이동 부드럽게 소스추가
+
+
+4. 이미지슬라이드 적용 (플러그인 사용)
+- slick.css/slick.js 걸어줌
+- html: .visual .slide 의 li 3개로 복사하고 이미지 교체
+- script: .visual .slide   소스추가
+- css: 화살표, 이미지 사이즈 등 소스추가// 이미시슬라이드 넘어갈때 (.slick-active) 애니메이션 소스 추가
+
+5. 반응형 작업
+- 반응형 css 작성

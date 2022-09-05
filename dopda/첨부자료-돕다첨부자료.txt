@@ -1,0 +1,197 @@
+
+1.풀페이지 스크린캡쳐 파일
+ - https://chrome.google.com/webstore/search/image%20downloader
+ - https://chrome.google.com/webstore/search/full%20page%20screen
+
+
+2.리니어아이콘 웹폰트사용
+ - https://linearicons.com > 상단 Free Version 페이지로 이동
+ - 사용할 아이콘 선택 후 더블클릭
+ - html코드 body영역에 붙임 (예 : <span class="lnr lnr-italic"></span>)
+ - css.CDN 링크시킬 것  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+
+3.폰트어썸 사용법 
+ - 무료폰트 경로 : https://fontawesome.com/v4.7.0/icons/
+ - font폴더와 css폴더에  font-awewome.min.css를 넣는다.
+ - head영역에 링크 <link rel="stylesheet" href="css/font-awesome.min.css">
+
+
+4.reset파일
+@charset "utf-8";
+
+/* reset */
+* {margin: 0;padding: 0;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700; font-size: inherit;}
+a {color: inherit; text-decoration: inherit;}
+img {vertical-align: middle;}
+a img {border: none;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+a:focus {outline: none}
+button:focus {outline: none}
+
+
+5.scroll.js적용법
+ - 먼저 js폴더에 scrolla.js파일 저장
+ - html > head 부분에 작성
+     예)
+     <script src="js/jquery-3.3.1.min.js"></script>
+     <script src="js/scrolla.jquery.min.js"></script> 
+
+ - body부분 애니메이션 줄 부분에  .animate클래스 넣고data-animate="motion" 작성
+ - js폴더에 script.js파일 만든다.
+ - html > head 영역에 link건다.
+   예)<script src="js/script.js"></script>
+
+ - script.js에 아래 스크립트 작성
+   예)$(function() {
+	$('.animate').scrolla({
+		mobile: true, //모바일버전시 활성화
+		once: false //스크롤시 딱 한번만 하고싶을땐 true
+	});    
+      }); 
+ *외부파일로 작성하니까 반드시 $(function(){});으로 감싸주고 그 안에 작성
+
+- scrolla.js가 잘 삽입되었는지 개발자 도구(F12)에서 확인
+- css 파일에 애니메이션 적용하는 부분에 .motion클래스붙임.
+
+6.fixheader 스크립트 적용
+
+- script.js파일에 스크립트 작성
+  
+   var scrollValue = 0;
+scrollValue = $(document).scrollTop(); 
+fixHeader();
+
+$(window).on('scroll resize', function(){
+   scrollValue = $(document).scrollTop(); 
+   fixHeader();
+});
+
+function fixHeader(){
+    if(scrollValue > 200) {
+        $('header').addClass('on');
+    }else {$('header').removeClass('on');}
+}
+
+ - 개발자에서 header에 'on'클래스가 붙었는지 확인
+ - css파일로 이동해서 'on'클래스가 붙을 때 상황을 작성
+
+
+7.이미지슬라이드 적용법
+- css폴더에 slick.css를 넣고, js폴더에 slick.min.js를 넣는다.
+- html > head영역에..링크를 건다
+  예)
+     <link rel="stylesheet" href="css/slick.css">
+     <script src="js/slick.min.js"></script>
+
+- body부분 수정
+  레이아웃 작성 때 ul> li에 하나만 작성한 것을 보여질 슬라이드 갯수에 맞게 수정
+
+- script.js파일 수정
+  $(function() {
+    $(".visual .slide").slick({ 
+        arrows: false, //화살표 사용안함
+        dots: true, //닷츠
+        autoplay: true, //자동재생
+        fade: true, //페이드인 효과        
+        autoplaySpeed: 5000, //재생시간
+        pauseOnHover:false, //마우스 오버시 슬라이드 멈춤 해제
+		pauseOnFocus:false //포커스시 슬라이드 멈춤 해제
+    });
+}); 
+ 
+*옵션은 제작할 사이트에 맞게 수정(특히 arrow와 dots 수정할 것)
+*외부파일로 작성하니까 반드시 $(function(){});으로 감싸주고 그 안에 작성
+
+- html파일에 정상적으로 슬라이드가 적용되었는지를 확인한다
+- arrow, dot를 css에서 작성
+- 슬라이드가 활성될 때에 애니메이션이 적용될 수 있도록,  애니메이션이 있는 곳(animation-name, animation-duration있는 곳)에, section.visual 옆에 .slick-active를 붙여준다.
+-.slick-dots 클래스를 개발자도구에서  클래스명을 가져와 css수정
+
+
+8.반응형제작 전
+- html > head영역에 붙여줌
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0, maximum-scale=1.0">
+     initial-scale=1.0 : 처음 페이지 로딩시 확대/ 축소되지 않은 원래크기를 사용
+     width=device-width : 페이지 너비를 기기의 스크린 너비로 설정, 즉 렌더링 영역을 기기의 뷰포트 크기와 같게 만들어줌                    minimum-scale=0 : 줄일 수 있는 최소 크기를 지정. 0~10사이값을 가짐
+     maximum-scale=1.0 : 늘릿릴 수 있는 최대값 지정. 0~10사이값을 가짐
+
+ - 아래하단에 가로 스크롤이 생기지 않도록 => overflow: hidden; 을 적어줌.
+
+9.레이아웃때  작성하지 않은 부분 작성 
+  - section.global ul li a .img img {width: 100%;}
+
+  - html 문서의 header > 햄버거버튼을 누르면 깔리는  검정반 투명bg를 만들기위해 작성
+    예)<span class ="bg"></span>
+
+  - html > header 에 메뉴오픈 버튼 삽입
+    예) lineaicons사용 => <a href="#" class="open"><span class="lnr lnr-menu"></span></a>
+
+  - html > header > nav 에 닫기 버튼 삽입
+    예)  lineaicons사용 => <a href="#" class="close"><span class="lnr lnr-cross"></span></a>
+
+  - html 문서의 visual > title에 <br class="mo">추가, <p>에 <br>추가
+
+
+ 10. css파일의  footer아래에 작성
+    - 모바일 네비 추가
+     예) 
+       header .open {display: none}
+       header .close {display: none}
+    - 모바일용 줄바꿈
+   예)  br.mo {display: none}/* 모바일용 줄바꿈 */
+
+ 
+
+11. 750px이하 반응형 때  section.premium .txtImg.motion 수정
+  
+  -.banner .li 가 애니메이션이 진행된 이후에 아래로 밀리는 것을 확인할 수 있음.
+
+  - 이유는!!
+   기존 레이아웃 작성 때
+   section.premium .txtImg.motion {position: absolute; left: 0; top:20%; display: block; width: 100%; overflow: hidden; animation-name: widthAni; animation-duration: 2.5s;}
+   => .txtImg와 .motion을 한번에 같이 작성하였음.
+   
+   반응형 (750px이하의 해상도)작업시
+   section.premium .txtImg.motion에 height값을 60px를 적용했는데
+   모션이 진행된 이후에 원래.txtImg.motion에 적용했던 postion:absolute가 해제되고 postion:static(기본값)이 되어  
+   원래 자신의 높이을 찾게되어 아래에 있는 banner .li가 아래로 밀리게 됩니다.
+   그래서 이것을 막기위해 아래와 같이 분리를 시켜줘야합니다.
+ 
+  예)
+  section.premium .txtImg {position: absolute; left: 0; top:20%; display: block; width: 100%; overflow: hidden;}
+  section.premium .txtImg.motion { animation-name: widthAni; animation-duration: 2.5s;}
+ 
+ * 결론적으로!!
+ position을 .txtImg에  주게되면!!
+ txtImg.motion에 postion이 적용되질 않아   section.premium .txtImg.motion에 적용된 높이값(60px)을 유지할 수 있음.
+
+- 반응형 수정 =>.txtImg에 있는 .motion을 지움
+ 예)
+    section.premium .txtImg {height: 60px;}
+    section.premium .txtImg img {height: 100%;}
+
+12. 모바일 네비 스크립트작성
+
+  - header nav.on작성
+  - script.js에 스크립트 작성
+
+  예)
+  $(function() {
+    $('header .open').on('click', function() {
+        $('body').css({'overflow': 'hidden'});   //스크롤하지 못하게 막음
+        $('header .bg').css({'display': 'block'});
+        $('header nav').addClass('on');
+	});
+    $('header .close, .section').on('click', function() {
+        $('body').css({'overflow': 'auto'});
+        $('header .bg').css({'display': 'none'});
+        $('header nav').removeClass('on');
+	});	
+}); 
+
+
+

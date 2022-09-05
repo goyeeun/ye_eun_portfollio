@@ -1,0 +1,81 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap');
+
+/* reset */
+* {margin: 0;padding: 0;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700; font-size: inherit;}
+a {color: inherit; text-decoration: inherit;}
+img {vertical-align: middle;}
+a img {border: none;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+a:focus {outline: none}
+button:focus {outline: none}
+
+/*layout*/
+.wrap{width: 100%; margin: 0 auto; overflow: hidden;}
+header {width: 100%;}
+.innerHeader{width: 1400px; margin: 0 auto; overflow: hidden;position: relative;}
+.innerHeader .logo { position: absolute; left:10%;top: 30px; transform: translateX(-50%); top: 20px;}
+.innerHeader .logo2 {position:absolute; left: 5%; top: 105px;font-size: 14px;}
+.innerHeader .logo2 a{color: orange; font-size: 20px; margin-left: 5px;}
+
+/*section.top*/
+.innerHeader .top{width: 100%;height: 80px;line-height: 80px; overflow: hidden;}
+.innerHeader .top .tnb{float: right; overflow: hidden;font-size:14px; font-weight: bold; }
+.innerHeader .top .tnb li{float: left;}
+.innerHeader .top .tnb li + li:before{content: '|'; margin: 0 15px;}
+.innerHeader .top .tnb li:last-child{margin-right: 0;}
+.innerHeader .top .gnb {float:left;position: relative; left: 50%; transform: translateX(-50%);}
+
+/*section.bottom*/
+.innerHeader .bottom {width: 100%;height: 70px; line-height: 70px; ;overflow: hidden;}
+.innerHeader .bottom .gnb{float: right; overflow: hidden; font-size: 23px;font-weight: bold;}
+.innerHeader .bottom .gnb li {float: left; margin-left: 30px;}
+.innerHeader .bottom .gnb li:last-child{margin-right: 0 auto;}
+
+/*topBanner*/
+.topBanner {border-top: 1.5px solid #6e4cff;padding-top: 10px; width: 110px; margin: 0 auto 30px;margin-bottom: 50px;text-align: center;margin-top: 60px;}
+.topBanner .txt {font-size: 35px;font-weight: bold; line-height: 1.5;margin-bottom: 65px}
+.topBanner .total {font-size: 10px; font-weight: bold;text-align: center;}
+
+/*section.gallery*/
+.gallery {width: 100%;margin: 0 auto; background: #f8f6f6;}
+section .inner{width: 1400px; margin: 0 auto;overflow: hidden;}
+section .inner .leftBox {float: left; font-size: 20px; border: 3px solid #ddd;display:inline-block; box-sizing: border-box;margin-top: 90px;line-height: 2.0;padding-left: 20px;box-sizing: border-box;width: 15%;}
+section .inner .leftBox:last-child{margin-right: 0 auto;}
+section .inner .leftBox h3 {font-size: 27px;padding: 10px 0;border-bottom: 2px solid #ddd;border-top: 2px solid #ddd;}
+section .inner .leftBox h3 a { margin-left: 50px; }
+section .inner .leftBox h3:nth-child(5) {border-bottom: none;}
+section .inner .leftBox h3:nth-child(1) {border-top: none;}
+section .inner .leftBox ul{margin-right: 70px;}
+section .inner .leftBox ul li {font-size: 16px;}
+
+
+/*rightBox*/
+section .inner .rightBox {width: 80%; margin: 0 auto; overflow: hidden;}
+section .inner .rightBox ul.index { width:100%;float: left;  text-align: left; margin-top: 50px;margin-left: 30px;margin-bottom: 150px}
+section .inner .rightBox ul li { width: 22%;float: left;margin-left: 1.2%;margin-top: 50px;font-size: 13px;line-height: -0.5;}
+section .inner .rightBox ul li span {font-weight: bold;font-size: 16px;}
+section .inner .rightBox ul li i {float: right;margin-top: 5px;}
+section .inner .rightBox ul li:nth-child(8) span i {margin-top: -8px;}
+section .inner .rightBox ul li:nth-child(10) span i {margin-top: -10px;}
+section .inner .rightBox ul li:nth-child(11) span i {margin-top: -10px;}
+section .inner .rightBox ul li:nth-child(12) span i {margin-top: -10px;}
+section .inner .rightBox ul li:last-child {margin-right: 0;}
+section .inner .rightBox ul li:nth-child(8) p span {font-size:12px}
+section .inner .rightBox ul li:nth-child(10) p span {font-size:14px;}
+section .inner .rightBox ul li:nth-child(11) p span {font-size:14px;}
+section .inner .rightBox ul li:nth-child(12) p span {font-size:14px;}
+section .inner .rightBox ul:hover {content: '1'}
+section .inner .rightBox ul li p.img {width: 100%;}
+section .inner .rightBox ul li p.img img {width: 100%;}
+
+/*section.footer*/
+footer {width: 100%;background:  rgb(35, 51, 74)}
+footer .inner {width: 1600px;margin: 0 auto;padding: 30px 15px; color: #ddd;overflow: hidden;}
+footer .inner .leftBox {float: left;width: 20%;}
+footer .inner .rightBox {float: right;width: 80%;line-height: 1.4;}
+footer .inner .rightBox a {margin-right: 23px;}
+footer .inner .rightBox p.img {margin-top: 15px}
