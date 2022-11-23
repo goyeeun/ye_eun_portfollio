@@ -13,6 +13,10 @@ $(window).on('scroll resize', function(){
     fixHeader();
 });
 
+// alert
+var userInput = prompt("이름을 입력하세요")
+alert( userInput + "님, 환영합니다. 저의 웹사이트에 방문해 주셔서 감사합니다!")
+
 //fixHeader();
 function fixHeader(){
     if(scrollFix > 150){
