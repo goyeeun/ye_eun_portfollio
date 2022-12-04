@@ -187,7 +187,7 @@ section.about .inner .rightBox .skill ul {overflow: hidden;display: flex;flex-di
 section.about .inner .rightBox .skill ul li {margin-top: 50px;font-size: 17px;}
 section.about .inner .rightBox .skill ul li .data {float: right;}
 section.about .inner .rightBox .skill ul li .data .count {font-family: 'Nanum Gothic', sans-serif;font-size: 20px;}
-section.about .inner .rightBox .skill ul li .data .count b {font-family: 'Nanum Gothic', sans-serif;font-size: 20px; padding-left: 10px;}
+section.about .inner .rightBox .skill ul li .data b {font-family: 'Nanum Gothic', sans-serif;font-size: 20px; padding-left: 10px;}
 
 /*section.secvisual*/
 .scvisual {position: relative; height: 1200px;overflow: hidden;padding-top: 300px}
